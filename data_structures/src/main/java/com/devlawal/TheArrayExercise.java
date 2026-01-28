@@ -93,4 +93,34 @@ public class TheArrayExercise {
         }
         return secondLargest;
     }
+
+    // 2d array
+    // sum of elements in 2d array
+    public int sumOfElementIn2DArray(int[][] val) {
+        int sum = 0;
+        int index = 0;
+        for (int[] value : val) {
+            for (int j = 0; j < val[index].length; j++) {
+                sum += value[j];
+            }
+            index++;
+        }
+        return sum;
+    }
+
+    // sum of elements in 2d array
+    public int maxElementIn2DArray(int[][] val) {
+        int max = val[0][0];
+        int index = 0;
+        for (int[] values : val) {
+            for (int j = 0; j < val[index].length; j++) {
+                if (val[index][j] > max) {
+                    max = val[index][j];
+                }
+            }
+            index++;
+        }
+        return max;
+    }
+
 }
